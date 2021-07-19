@@ -4,42 +4,26 @@
  <meta charset="utf-8">
 
  <title>Cadastro - Processo Seletivo </title>
-<<<<<<< HEAD
-	<link rel="stylesheet" href="css\styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;600;900&display=swap" rel="stylesheet">
-=======
   <link rel="icon" type="image/png" sizes="580x550" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8VKzZMjPu-3a4zHHG-kk6ujUoUJmwt5A8WTAIO0vLSfCvIEU-F4Q12iRD5xGw-jGiFE4&usqp=CAU">
 	<link rel="stylesheet" href="css\styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;600;900&display=swap" rel="stylesheet">
->>>>>>> 1f731da (Terceira versão - API ViaCep\melhorias)
 
 </head>
 <body id="project">
  <div class="menu">
  	<table style="width:45%"> 
-<<<<<<< HEAD
-  <img src="https://lattinegroup.com/wp-content/uploads/2018/08/logo-crowe-1.png" class="logo">
- 	<ul>
-			<li><a href = "index.html">Inicio |</a></li> 
-			<li><a href = "Cadastro.html">Cadastro |</a></li>
-			<li><a href = "Todos.html">Todos os Candidatos |</a></li>
-=======
   <a href="index.html"><img src="https://lattinegroup.com/wp-content/uploads/2018/08/logo-crowe-1.png" class="logo">
  	<ul>
 			<li><a href = "index.html">Inicio |</a></li> 
 			<li><a href = "Cadastro.html">Cadastro |</a></li>
 			<li><a href = "todosphp.php">Todos os Candidatos |</a></li>
->>>>>>> 1f731da (Terceira versão - API ViaCep\melhorias)
 			<li><a href = "Editar.html">Editar |</a></li>
 			<li><a href = "Excluir.html">Excluir |</a></li>
 			<li><a href = "ID.html">Consulta por ID </a></li>
 	</ul>
 </table>
 </div>
-<<<<<<< HEAD
-=======
 <div class="box1">
->>>>>>> 1f731da (Terceira versão - API ViaCep\melhorias)
 <?php
 //dados do HTML
 $res = $_POST['res'];
@@ -71,38 +55,11 @@ $conn = new mysqli($server,$user,$pass,$bdname);
 
 
 
-<<<<<<< HEAD
-
-
-//verificação com o BD
-if ($conn->connect_error) {
-	echo "
-		<html>
-		<script>
-		window.alert('Algo de errado não ta certo!');
-		</script>
-		</html>
-	";
-}else{
-	echo "
-		<html>
-		<script>
-		window.alert('Conectado com sucesso!!');
-		</script>
-		</html>
-	";
 
 $cadastros = "INSERT INTO candidatos (Resumo, Logradouro, Numero, Complemento, Cidade, Estado, CEP, Nome )VALUES ('$res','$log','$num','$com','$cid','$est','$cep','$nome')";
 
 
 
-=======
-//Cadastrando os dados
-$cadastros = "INSERT INTO candidatos (Resumo, Logradouro, Numero, Complemento, Cidade, Estado, CEP, Nome )VALUES ('$res','$log','$num','$com','$cid','$est','$cep','$nome')";
-
-
-//Condição que diz se foi cadastrado ou não
->>>>>>> 1f731da (Terceira versão - API ViaCep\melhorias)
 if ($conn->query($cadastros)==True) {
 	echo "<br><h1><font color='green' align='center'>Cadastrado com Sucesso!</font></h1></br>"; 
 
@@ -110,12 +67,6 @@ if ($conn->query($cadastros)==True) {
 	echo "<br><h1><font color='red' align='center'>Erro ao cadastrar!</font></h1></br>";
 	}
 
-<<<<<<< HEAD
-}
-
-$conn->close();
-?>
-=======
 
 $conn->close();
 ?>
@@ -174,4 +125,3 @@ $conn->close();
 <br><br><br>
    <script src="script.js"></script>
   </body>
->>>>>>> 1f731da (Terceira versão - API ViaCep\melhorias)

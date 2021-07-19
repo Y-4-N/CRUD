@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,7 +24,6 @@
 </table>
 </div>
 <div class="box1">
->>>>>>> 1f731da (Terceira versão - API ViaCep\melhorias)
 <?php
 //dados do HTML
 
@@ -45,26 +42,6 @@ $conn = new mysqli($server,$user,$pass,$bdname);
 //verificação com o BD
 
 
-<<<<<<< HEAD
-if ($conn->connect_error) {
-	echo "
-		<html>
-		<script>
-		window.alert('Algo de errado não ta certo!');
-		</script>
-		</html>
-	";
-}else{
-	echo "
-		<html>
-		<script>
-		window.alert('Excluído com sucesso!!');
-		</script>
-		</html>
-	";
-
-=======
->>>>>>> 1f731da (Terceira versão - API ViaCep\melhorias)
 $deletar = "DELETE FROM candidatos WHERE id = $id";
 
 
@@ -76,12 +53,6 @@ if ($conn->query($deletar)==True) {
 	echo "<br><h1><font color='red' align='center'>Erro ao Deletar!</font></h1></br>";
 	}
 
-<<<<<<< HEAD
-}
-
-$conn->close();
-?>
-=======
 
 
 $conn->close();
@@ -101,4 +72,3 @@ $conn->close();
  </form>
 </div>
 </body>
->>>>>>> 1f731da (Terceira versão - API ViaCep\melhorias)

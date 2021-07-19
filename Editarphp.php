@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,18 +24,13 @@
 </table>
 </div>
 <div class="box1">
->>>>>>> 1f731da (Terceira versão - API ViaCep\melhorias)
 <?php
 //dados do HTML
 $res = $_POST['res'];
 
 $log = $_POST['log'];
 
-<<<<<<< HEAD
-$num = $_POST['nu'];
-=======
 $num = $_POST['num'];
->>>>>>> 1f731da (Terceira versão - API ViaCep\melhorias)
 
 $com = $_POST['com'];
 
@@ -63,33 +56,9 @@ $bdname = "db";
 
 $conn = new mysqli($server,$user,$pass,$bdname);
 
-<<<<<<< HEAD
 //verificação com o BD
 
-
-if ($conn->connect_error) {
-	echo "
-		<html>
-		<script>
-		window.alert('Algo de errado não ta certo!');
-		</script>
-		</html>
-	";
-}else{
-	echo "
-		<html>
-		<script>
-		window.alert('Conectado com sucesso!!');
-		</script>
-		</html>
-	";
-
-$atualizar = "UPDATE candidatos set nome = '$nome', res = '$res', log = '$log', num = '$num', com = '$com', cid = '$cid', est = '$est', cep = '$cep' where id = $id";
-
-=======
-//Atualizar os dados
 $atualizar = "UPDATE candidatos set Resumo = '$res',Logradouro = '$log',Numero = '$log',Complemento = '$com',Cidade = '$cid',Estado = '$est',CEP = '$cep',Nome = '$nome'  where id = $id";
->>>>>>> 1f731da (Terceira versão - API ViaCep\melhorias)
 
 
 if ($conn->query($atualizar)==True) {
@@ -99,12 +68,6 @@ if ($conn->query($atualizar)==True) {
 	echo "<br><h1><font color='red' align='center'>Erro ao atualizar!</font></h1></br>";
 	}
 
-<<<<<<< HEAD
-}
-
-$conn->close();
-?>
-=======
 
 
 $conn->close();
@@ -167,4 +130,3 @@ $conn->close();
 </div>
 </body>
 </html>
->>>>>>> 1f731da (Terceira versão - API ViaCep\melhorias)
